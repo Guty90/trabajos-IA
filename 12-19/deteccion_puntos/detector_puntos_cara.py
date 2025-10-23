@@ -152,54 +152,54 @@ while cap.isOpened():
             # ===== DETECCIÓN DE EMOCIONES MEJORADA =====
             
             scores = {
-                "Feliz 😄": 0,
-                "Triste 😢": 0,
-                "Enojado 😠": 0,
-                "Sorprendido 😮": 0,
-                "Neutral 😐": 0
+                "Feliz": 0,
+                "Triste": 0,
+                "Enojado": 0,
+                "Sorprendido": 0,
+                "Neutral": 0
             }
             
             # FELIZ: Boca sonriente, comisuras arriba, ojos normales
             if mouth_curve > 5 and mouth_ratio < 0.4:
-                scores["Feliz 😄"] += 3
+                scores["Feliz"] += 3
             if mouth_ratio > 0.15 and mouth_ratio < 0.35 and mouth_curve > 3:
-                scores["Feliz 😄"] += 2
+                scores["Feliz"] += 2
             if brow_ratio > 0.25 and brow_ratio < 0.35:
-                scores["Feliz 😄"] += 1
+                scores["Feliz"] += 1
                 
             # TRISTE: Boca hacia abajo, cejas ligeramente juntas, ojos normales
             if mouth_curve < -3:
-                scores["Triste 😢"] += 3
+                scores["Triste"] += 3
             if mouth_ratio < 0.2 and mouth_curve < -1:
-                scores["Triste 😢"] += 2
+                scores["Triste"] += 2
             if brow_ratio > 0.28 and brow_ratio < 0.35:
-                scores["Triste 😢"] += 1
+                scores["Triste"] += 1
             if avg_ear < 0.25:
-                scores["Triste 😢"] += 1
+                scores["Triste"] += 1
                 
             # ENOJADO: Cejas hacia abajo, boca tensa
             if brow_ratio < 0.25:
-                scores["Enojado 😠"] += 3
+                scores["Enojado"] += 3
             if mouth_ratio < 0.2 and abs(mouth_curve) < 3:
-                scores["Enojado 😠"] += 2
+                scores["Enojado"] += 2
             if nose_mouth_ratio < 0.22:
-                scores["Enojado 😠"] += 1
+                scores["Enojado"] += 1
                 
             # SORPRENDIDO: Boca muy abierta, cejas arriba, ojos abiertos
             if mouth_ratio > 0.45:
-                scores["Sorprendido 😮"] += 3
+                scores["Sorprendido"] += 3
             if brow_ratio > 0.35:
-                scores["Sorprendido 😮"] += 2
+                scores["Sorprendido"] += 2
             if avg_ear > 0.28:
-                scores["Sorprendido 😮"] += 2
+                scores["Sorprendido"] += 2
                 
             # NEUTRAL: valores intermedios
             if 0.15 <= mouth_ratio <= 0.25 and abs(mouth_curve) < 3:
-                scores["Neutral 😐"] += 2
+                scores["Neutral"] += 2
             if 0.25 <= brow_ratio <= 0.32:
-                scores["Neutral 😐"] += 2
+                scores["Neutral"] += 2
             if 0.22 <= avg_ear <= 0.27:
-                scores["Neutral 😐"] += 1
+                scores["Neutral"] += 1
 
             # Seleccionar la emoción con mayor puntaje
             emotion = max(scores, key=scores.get)
