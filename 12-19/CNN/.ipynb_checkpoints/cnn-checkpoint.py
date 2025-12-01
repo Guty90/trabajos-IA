@@ -12,7 +12,7 @@ import keras
 # PASO 1: Cargar las imágenes de sportsimages
 # ----------------------------------------------------------------
 
-dirname = os.path.join(os.getcwd(), 'sportimages')
+dirname = os.path.join(os.getcwd(), 'animales')
 imgpath = dirname + os.sep
 
 images = []
