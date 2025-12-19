@@ -1,0 +1,31 @@
+touch .gitignore
+```
+
+2. **Agrega estas líneas al `.gitignore`**:
+```
+# Entorno virtual
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Otros
+*.log
+.env

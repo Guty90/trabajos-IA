@@ -1,0 +1,9 @@
+Pregunta: Que es TOKEN WEB JSON?
+Respuesta: Token Web JSON (JWT) es un estándar para representar información de usuario en un token. Contiene cabecera, carga útil y firma. Se usa en autenticación y autorización. Es autosignado por cliente (JWT-RS256) o servidor (JWT-HS256). Es vulnerable a ataques de replay y man-in-the-middle. Se decodifica con librerías como jwt.decode(). Verifica firma con librerías como pyjwt.decode().
+
+Pregunta: Que es un ciclo?
+Respuesta: Un ciclo es una estructura de control que permite ejecutar un bloque de código repetidamente. Hay diferentes tipos de ciclos: for, while, for range. Se utiliza cuando se desconoce cuántas veces se debe ejecutar una instrucción. Por ejemplo, for i in range(10): print(i). Es importante controlar la salida con break o continue. Ciclos son útiles para iterar sobre listas, strings, tuplas, dicts. También se usan en bucles infinitos para servidores web.
+
+Pregunta: Y que es un hashmap?
+Respuesta: Un hashmap es una estructura de datos que permite acceso rápido a valores mediante una clave. Es similar a un diccionario, pero puede almacenar valores de cualquier tipo. Es útil para almacenar datos que se acceden frecuentemente, como caché de resultados de consultas. Es más lenta que un diccionario en Python, pero más flexible en términos de tipos de valores. Es implementada mediante un hash para acceso rápido. Es una estructura clave-valor. Es mutable. Es implementada en Python con el tipo dict.
+
